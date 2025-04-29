@@ -8,7 +8,11 @@ function App() {
   return (
     <div
       css={css`
-        width: 700px;
+        max-width: 700px;
+        margin-left: auto;
+        margin: auto;
+        padding: 15px;
+        padding-top: 150px;
         background-color: #202b44;
       `}
     >

@@ -33,7 +33,13 @@ const TaskList = () => {
                 checked={task.complete}
                 onClick={() => dispatch(toggleComplete(task.id))}
               />
-              <p>{task.title}</p>
+              <p
+                css={css`
+                  color: #fff;
+                `}
+              >
+                {task.title}
+              </p>
               <button
                 type="button"
                 onClick={() => dispatch(deleteTask(task.id))}
@@ -46,7 +52,11 @@ const TaskList = () => {
                   }
                 `}
               >
-                <ClearIcon />
+                <ClearIcon
+                  css={css`
+                    cursor: pointer;
+                  `}
+                />
               </button>
             </div>
           );

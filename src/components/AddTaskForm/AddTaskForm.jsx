@@ -30,28 +30,39 @@ const AddTaskForm = () => {
           gap: 30px;
         `}
       >
-        <TextField
-          id="standard-basic"
-          label="Add Task"
-          variant="outlined"
-          size="small"
+        <input
+          type="text"
+          placeholder="Add task"
           value={inputValue}
           onChange={handleChange}
           required
+          css={css`
+            flex: 1;
+            min-width: 0;
+          `}
         />
         <button
           variant="contained"
           type="submit"
           css={css`
-            padding: 8px 25px;
-            border: none;
-            border-radius: 20px;
-            background-color: #5d2de6;
+            width: 114px;
+            display: block;
+            padding: 5px 15px;
+            background-color: #6c5dd3;
             color: #ffffff;
+            border: none;
+            border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-            :hover {
-              background-color: #5419f5;
+            font-size: 16px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+
+            &:hover {
+              transform: translateY(-5px);
+              background-color: #7b6ee3;
+            }
+
+            &:active {
+              transform: translateY(-2px);
             }
           `}
         >
